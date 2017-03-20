@@ -1,0 +1,75 @@
+@import "./variables";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.top_nav_bar {
+    overflow: hidden;
+    display: block;
+    height: 50px;
+    background: #1a1b1a;
+    padding: 0 8%;
+    border-top: 5px solid #8a0404;
+}
+
+p {
+    width: auto;
+    float: left;
+    color: #7b7474;
+    font-size: 18px;
+    line-height: 50px;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.advertiser_list_container {
+    margin: 0 auto;
+    width: 84%;
+    margin-top: 6%;
+    display: block;
+    overflow: hidden;
+
+  .row {
+    overflow: hidden;
+    width: 100%;
+    float: left;
+    min-height: 50px;
+  }
+}
+
+h2 {
+    margin: 0;
+    float: left;
+    font-size: xx-large;
+    font-weight: 500;
+    line-height: 50px;
+}
+
+.select_request {
+    float: right;
+    background-color: #3b8ec2;
+    height: 30px;
+    overflow: hidden;
+    color:white;
+    margin:10px 0;
+
+    select {
+      background: transparent;
+      font-size: 14px;
+      height: 29px;
+      padding: 5px; /* If you add too much padding here, the options won't show in IE */
+      border-radius: 5px;
+    }
+}
+
+pre{
+  border: 1px solid #e8e6e6;
+  background: #f7f7f7;
+  font-size: 13px;
+  min-height: 50px;
+  padding: 0;
+}

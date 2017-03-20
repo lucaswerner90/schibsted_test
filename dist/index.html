@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Schibsted API</title>
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <div class="top_nav_bar">
+      <p>Schibsted REST framework </p>
+      <p class="mini_font_size"> v3.1.1</p>
+    </div>
+
+    <div class="advertiser_list_container">
+      <div class="row">
+        <h2>Advertiser List</h2>
+        <select class="select_request" name="select_type">
+          <option value="JSON">JSON</option>
+          <option value="XML">XML</option>
+        </select>
+      </div>
+      <div class="row">
+        <pre>
+          <code class="http">GET /advertisers/?format=api</code>
+        </pre>
+      </div>
+      <div class="row">
+        <pre>
+          <code class="json">{test:'test'}</code>
+        </pre>
+      </div>
+
+    </div>
+
+
+    <script src="./js/main.js" charset="utf-8"></script>
+  </body>
+</html>
