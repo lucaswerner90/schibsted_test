@@ -1,75 +1,102 @@
+// Import of the variables file.
 @import "./variables";
 
+
+// This file contains the styles of our application.
+// This file will be compiled in the main.css in our 'dist' dir.
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  font-size: 16px;
+  font-family: $main_font_family;
+  font-size: $main_font_size;
 }
 
 .top_nav_bar {
-    overflow: hidden;
-    display: block;
-    height: 50px;
-    background: #1a1b1a;
-    padding: 0 8%;
-    border-top: 5px solid #8a0404;
+  overflow: hidden;
+  display: block;
+  height: 50px;
+  background: #1a1b1a;
+  padding: 0 8%;
+  border-top: 5px solid $top_nav_bar_border_color;
 }
 
 p {
-    width: auto;
-    float: left;
-    color: #7b7474;
-    font-size: 18px;
-    line-height: 50px;
-    margin: 0;
-    font-family: sans-serif;
+  width: auto;
+  float: left;
+  color: $grey_one;
+  font-size: 18px;
+  line-height: 50px;
+  margin: 0;
+  font-family: $main_font_family;
 }
 
 .advertiser_list_container {
-    margin: 0 auto;
-    width: 84%;
-    margin-top: 6%;
-    display: block;
-    overflow: hidden;
+  margin: 0 auto;
+  width: 84%;
+  margin-top: 6%;
+  display: block;
 
   .row {
-    overflow: hidden;
     width: 100%;
     float: left;
-    min-height: 50px;
+    position: relative;
+    pre{
+      display: block;
+      font-size: 14px;
+      border: 1px solid $grey_two;
+      background: $grey_background;
+      white-space: pre-line;
+    }
   }
 }
 
 h2 {
-    margin: 0;
-    float: left;
-    font-size: xx-large;
-    font-weight: 500;
-    line-height: 50px;
+  margin: 0;
+  float: left;
+  font-size: xx-large;
+  font-weight: 500;
+  line-height: 50px;
 }
 
 .select_request {
-    float: right;
-    background-color: #3b8ec2;
-    height: 30px;
-    overflow: hidden;
-    color:white;
-    margin:10px 0;
-
-    select {
-      background: transparent;
-      font-size: 14px;
-      height: 29px;
-      padding: 5px; /* If you add too much padding here, the options won't show in IE */
-      border-radius: 5px;
-    }
+  float: right;
+  background-color: $main_background_color;
+  height: 30px;
+  overflow: hidden;
+  color:$primary_color;
+  margin:10px 0;
+  width: 20%;
+  font-size: 14px;
+  max-width: 80px;
+  select {
+    background: $main_background_color;
+    font-size: 14px;
+    height: 29px;
+    padding: 5px;
+    border-radius: 5px;
+  }
 }
 
-pre{
-  border: 1px solid #e8e6e6;
-  background: #f7f7f7;
+.tooltiptext {
+  height: 30px;
+  background: $black;
+  color: $primary_color;
+  line-height: 30px;
+  padding: 10px;
+  border-radius: 10px;
   font-size: 13px;
-  min-height: 50px;
-  padding: 0;
+  position: absolute;
+  right: -4%;
+  top: -50px;
+  z-index: 2;
+  visibility:hidden;
+  .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 17px solid $black;
+    position: absolute;
+    right: 13%;
+  }
 }

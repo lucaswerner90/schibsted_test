@@ -1,38 +1,55 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Schibsted API</title>
-    <link rel="stylesheet" href="/css/main.css">
-  </head>
-  <body>
-    <div class="top_nav_bar">
-      <p>Schibsted REST framework </p>
-      <p class="mini_font_size"> v3.1.1</p>
+<head>
+  <meta charset="utf-8">
+  <title>Schibsted API</title>
+
+  <!-- link to the main.css -->
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <div class="top_nav_bar">
+    <p>Schibsted REST framework v3.1.1</p>
+  </div>
+
+  <div class="advertiser_list_container">
+
+    <div class="row">
+      <!--  Tooltip text -->
+      <span class="tooltiptext">
+        Specify a format for the GET request
+        <div class="arrow-down"></div>
+      </span>
+      <!-- Title -->
+      <h2>Advertiser List</h2>
+      <!-- Select -->
+      <select class="select_request" name="select_type">
+        <!-- Options could be downloaded from a file for a better maintenable code, in a future -->
+        <option value="JSON">JSON</option>
+        <option value="XML">XML</option>
+      </select>
+    </div>
+    <!-- Here is where we place the response of every request -->
+    <!-- We use the Highlight.js library for this purpose -->
+    <div class="row">
+      <pre>
+        <code id="request" class="http"></code>
+      </pre>
+      <pre>
+        <code id="response_type" class="http"></code>
+        <code id="response_content"></code>
+      </pre>
     </div>
 
-    <div class="advertiser_list_container">
-      <div class="row">
-        <h2>Advertiser List</h2>
-        <select class="select_request" name="select_type">
-          <option value="JSON">JSON</option>
-          <option value="XML">XML</option>
-        </select>
-      </div>
-      <div class="row">
-        <pre>
-          <code class="http">GET /advertisers/?format=api</code>
-        </pre>
-      </div>
-      <div class="row">
-        <pre>
-          <code class="json">{test:'test'}</code>
-        </pre>
-      </div>
+  </div>
+  <!--  All the script's files are at the bottom of the body tag for performance -->
+  <!-- This JS is the compiled and concatenated developer JS -->
+  <script src="./js/main.js" charset="utf-8"></script>
 
-    </div>
+  <!-- Because of we only use 1 lib, I decide to put it as a single file instead of create a gulp task to compile
+        in case that the application continues growing up, you create a gulp task that concat all the libraries in one file
+  -->
+  <script src="./js/libs/highlight.pack.js" charset="utf-8"></script>
 
-
-    <script src="./js/main.js" charset="utf-8"></script>
-  </body>
+</body>
 </html>

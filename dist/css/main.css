@@ -25,13 +25,17 @@ p {
   margin: 0 auto;
   width: 84%;
   margin-top: 6%;
-  display: block;
-  overflow: hidden; }
+  display: block; }
   .advertiser_list_container .row {
-    overflow: hidden;
     width: 100%;
     float: left;
-    min-height: 50px; }
+    position: relative; }
+    .advertiser_list_container .row pre {
+      display: block;
+      font-size: 14px;
+      border: 1px solid #e8e6e6;
+      background: #F0F0F0;
+      white-space: pre-line; }
 
 h2 {
   margin: 0;
@@ -45,22 +49,39 @@ h2 {
   background-color: #3b8ec2;
   height: 30px;
   overflow: hidden;
-  color: white;
-  margin: 10px 0; }
+  color: #fff;
+  margin: 10px 0;
+  width: 20%;
+  font-size: 14px;
+  max-width: 80px; }
   .select_request select {
-    background: transparent;
+    background: #3b8ec2;
     font-size: 14px;
     height: 29px;
     padding: 5px;
-    /* If you add too much padding here, the options won't show in IE */
     border-radius: 5px; }
 
-pre {
-  border: 1px solid #e8e6e6;
-  background: #f7f7f7;
+.tooltiptext {
+  height: 30px;
+  background: #000;
+  color: #fff;
+  line-height: 30px;
+  padding: 10px;
+  border-radius: 10px;
   font-size: 13px;
-  min-height: 50px;
-  padding: 0; }
+  position: absolute;
+  right: -4%;
+  top: -50px;
+  z-index: 2;
+  visibility: hidden; }
+  .tooltiptext .arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 17px solid #000;
+    position: absolute;
+    right: 13%; }
 
 /*
 
