@@ -69,10 +69,13 @@ gulp.task('localserver', function() {
 
 
 // Here we use the gulp watch function to recompile the files in case we need it.
-gulp.task('init',['copy_libs','copy_data','copy_index','sass','js','localserver'], function () {
+gulp.task('init',['copy_index','copy_libs','copy_data','sass','js'], function () {
+});
+
+gulp.task('execute',['init','localserver'],function () {
   gulp.watch([MAIN_CONF.src_folder+MAIN_CONF.src_files.libs], ['copy_libs']);
   gulp.watch([MAIN_CONF.src_folder+MAIN_CONF.src_files.html], ['copy_index']);
   gulp.watch([MAIN_CONF.src_folder+MAIN_CONF.src_files.data], ['copy_data']);
   gulp.watch(MAIN_CONF.src_folder+MAIN_CONF.src_files.style, ['sass']);
   gulp.watch(MAIN_CONF.src_folder+MAIN_CONF.src_files.code, ['js']);
-});
+})
